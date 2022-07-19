@@ -24,10 +24,10 @@
     },
     "/login": {
       "post": {
-        "description": "",
+        "description": "Route for user authentication.",
         "parameters": [
           {
-            "name": "body",
+            "name": "email",
             "in": "body",
             "schema": {
               "type": "object",
@@ -39,6 +39,20 @@
                   "example": "any"
                 }
               }
+            },
+            "description": "E-mail do usuário.",
+            "required": true,
+            "example": "user@email.com"
+          },
+          {
+            "name": "password",
+            "description": "Senha do usuário.",
+            "required": true,
+            "in": "body",
+            "example": "sdij12eh0f1",
+            "schema": {
+              "type": "object",
+              "properties": {}
             }
           }
         ],
